@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "freertos.h": "c",
+        "driverlib.h": "c",
+        "integer.h": "c",
+        "semtest.h": "c",
+        "pollq.h": "c",
+        "blockq.h": "c",
+        "semphr.h": "c",
+        "task.h": "c",
+        "timers.h": "c",
+        "queue.h": "c"
+    },
+    "cmake.sourceDirectory": "/home/lautaroveliz/Documentos/SO2/tp_4/Source"
+}
