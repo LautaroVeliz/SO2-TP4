@@ -68,3 +68,8 @@ Para poder ejecutar correctamente la tarea top se necesita poder medir el tiempo
   - Y esta define desde donde se puede obtener el valor actual del contador usado para la estadística
   
 Teniendo en cuenta esto se configuró el Timer0A, para que ejecute cuentas de **TIMER_TICK_COUNT** (constante definida) ticks (estos ticks son los ejecutados por el Clk del sistema), a su vez al llegar a 0 el handler del Timer0A incrementa la variable global *s_overflow_counter* y reinicia el conteo atrás del Timer. El valor de **TIMER_TICK_COUNT** está definido para que los ticks del Timer0A se realicen en periodos de 10uS, el cálculo es el siguiente: X Hz * 10uS = X Hz / 10.000 = **TIMER_TICK_COUNT** ticks. Por ello **TIMER_TICK_COUNT** equivale a *( configCPU_CLOCK_HZ / 10000 )*.
+
+## Utilización
+Para poder correr el proyecto se debe ingresar al directorio *./Demo/CORTEX_LM3S811_GCC* dentro del proyecto y ejecutar el ejecutale *run.sh*. De esta manera se compilaran los archivos necesarios y qemu emulara el comportamiento del microcontrolador. A partir de aqui, como ya se menciono, los comando disponibles son:
+- **top**: Para la ejecucion de la tarea tipo top.
+- **Nxx**: Para la variacion del numero de muestras a tomar en el promedio del filtro de pasa bajo para la exibicion en la pantalla LCD simulada.
